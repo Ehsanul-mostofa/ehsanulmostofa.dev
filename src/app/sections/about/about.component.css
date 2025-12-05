@@ -1,0 +1,226 @@
+.about-wrapper {
+  margin-top: 80px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 20px;
+}
+
+/* Title row (same layout feel as "Skill Folio") */
+.about-title-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.about-title {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+/* Line under the title (same style idea as Skill Folio) */
+.about-underline {
+  width: 100%;
+  height: 1.5px;
+  background: rgba(255, 255, 255, 0.12);
+  margin: 12px auto 30px;
+}
+
+/* About text */
+.about-text {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  color: rgba(255, 255, 255, 0.85);
+  text-align: center;
+}
+
+/* Light mode: About title turns dark */
+:host-context(.light-theme) .about-title {
+  color: #1a1a1a; /* deep ash / black */
+}
+
+/* Light mode: underline becomes darker */
+:host-context(.light-theme) .about-underline {
+  background: rgba(0, 0, 0, 0.15);
+}
+
+/* Light mode: text turns ash */
+:host-context(.light-theme) .about-text {
+  color: #2d2d2d; /* clean soft black */
+}
+
+.education-section {
+  margin-top: 80px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 20px 40px;
+}
+
+.edu-header {
+  display: flex;
+  justify-content: center;   /* Center horizontally */
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+}
+
+
+.edu-pill {
+  width: 40px;
+  height: 40px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at 20% 0%, #2d77ff, #111827);
+  /* box-shadow: 0 8px 24px rgba(37, 99, 235, 0.45); */
+  font-size: 1.3rem;
+}
+
+.edu-title-main {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+/* Underline */
+.edu-underline {
+  width: 100%;
+  height: 1.5px;
+  background: rgba(255, 255, 255, 0.12);
+  margin: 12px 0 30px;
+}
+
+/* Card */
+.edu-card {
+  background: rgba(15, 23, 42, 0.8);
+  border-radius: 18px;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  padding: 24px 22px;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.8);
+}
+
+/* Top row: program + dates */
+.edu-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.edu-program {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.edu-school {
+  font-size: 0.95rem;
+  color: rgba(148, 163, 184, 0.95);
+}
+
+.edu-dates {
+  font-size: 0.9rem;
+  color: rgba(148, 163, 184, 0.95);
+}
+
+/* Body text + bullets */
+.edu-summary {
+  font-size: 0.98rem;
+  line-height: 1.6rem;
+  margin-bottom: 12px;
+  color: rgba(226, 232, 240, 0.95);
+}
+
+.edu-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.edu-list li {
+  font-size: 0.96rem;
+  line-height: 1.6rem;
+  color: rgba(226, 232, 240, 0.95);
+  position: relative;
+  padding-left: 18px;
+  margin-bottom: 4px;
+}
+
+.edu-list li::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: #22c55e; /* teal/green bullet */
+  position: absolute;
+  left: 0;
+  top: 0.55rem;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .edu-card-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .edu-dates {
+    margin-top: 4px;
+  }
+}
+
+/* Wrapper */
+.contrib-wrapper {
+  margin-top: 60px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+/* Header row centered */
+.contrib-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.contrib-title {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.contrib-icon {
+  width: 36px;
+  height: 36px;
+}
+
+/* Underline same as Education */
+.contrib-underline {
+  width: 100%;
+  height: 1.5px;
+  background: rgba(255, 255, 255, 0.12);
+  margin: 12px auto 30px;
+}
+
+/* Card outline same as edu-card */
+.contrib-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 25px;
+  border-radius: 18px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Image inside the card */
+.contrib-image {
+  width: 100%;
+  max-width: 760px;
+  border-radius: 10px;
+}
+

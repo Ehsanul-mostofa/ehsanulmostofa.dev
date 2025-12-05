@@ -1,0 +1,86 @@
+.skills-section {
+  margin-top: 100px;
+  text-align: center;
+}
+
+/* Title */
+.title-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.title-icon {
+  width: 36px;
+  height: 36px;
+}
+
+.title-row h2 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+/* Underline */
+.underline {
+  width: 100%;
+  max-width: 900px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.08);
+  margin: 12px auto 50px;
+}
+
+/* The exact 5-column grid */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 28px;
+  justify-items: center;
+}
+
+/* Tile Style */
+.skill-card {
+  width: 130px;
+  height: 130px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(45, 119, 255, 0.4); /* Always Blue */
+  border-radius: 16px;
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: 0.25s ease;
+}
+
+
+.skill-card:hover {
+  border-color: rgba(45, 119, 255, 0.5);
+  background: rgba(45, 119, 255, 0.07);
+  transform: translateY(-4px);
+}
+
+/* Icon */
+.skill-icon {
+  width: 40px;
+  height: 40px;
+}
+
+/* Label */
+.skill-card p {
+  margin-top: 12px;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+/* Responsive Grid */
+@media (max-width: 900px) {
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

@@ -1,0 +1,17 @@
+<section class="skills-section">
+
+  <div class="title-row">
+    <img src="assets/icons/skill.png" class="title-icon" />
+    <h2>Skill Folio</h2>
+  </div>
+
+  <div class="underline"></div>
+
+  <div class="skills-grid">
+    <div class="skill-card" *ngFor="let s of skills">
+      <img [src]="s.icon" class="skill-icon" alt="">
+      <p>{{ s.label }}</p>
+    </div>
+  </div>
+
+</section>

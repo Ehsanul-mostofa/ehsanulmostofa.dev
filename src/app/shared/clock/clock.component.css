@@ -1,0 +1,16 @@
+.clock {
+  font-family: "Consolas", "Fira Code", monospace;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #b3b8c4;
+  letter-spacing: 2px;
+  user-select: none;
+}
+
+/* responsive */
+@media (max-width: 600px) {
+  .clock {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+  }
+}

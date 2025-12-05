@@ -1,0 +1,25 @@
+<nav class="nav" [class.scrolled]="scrolled">
+  <div class="nav-left">
+    <a routerLink="/" class="logo">
+      ehsanulmostofa<span class="dev">.dev</span>
+</a>
+
+  </div>
+
+  <div class="nav-right" [class.open]="menuOpen">
+    <a routerLink="/" (click)="closeMenu()">Home</a>
+    <a routerLink="about" (click)="closeMenu()">About</a>
+    <a routerLink="projects" (click)="closeMenu()">Projects</a>
+    <a routerLink="contact" (click)="closeMenu()">Contact</a>
+    <a class="resume-btn">Resume</a>
+
+  </div>
+
+<button class="theme-toggle" (click)="toggleTheme()">
+  <img *ngIf="isDark" src="assets/icons/sun.png" alt="sun icon" />
+  <img *ngIf="!isDark" src="assets/icons/moon.png" alt="moon icon" />
+</button>
+
+<div class="hamburger" (click)="toggleMenu()">☰</div>
+
+</nav>

@@ -1,0 +1,224 @@
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  min-height: calc(100vh - 150px); /* pulls everything UP */
+  padding-top: 40px;               /* slight breathing room */
+}
+
+
+/* text side */
+.hero-left {
+  flex: 1.2;
+}
+
+.hero-title {
+  font-size: 4.2rem;
+  font-weight: 800;
+  line-height: 4.3rem;   /* Makes them closer */
+}
+
+.hero-subtitle {
+  font-size: 0.98rem;
+  max-width: 440px;
+  color: rgba(245, 245, 245, 0.8);
+  margin-bottom: 24px;
+}
+
+/* buttons */
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.btn-primary,
+.btn-ghost {
+  padding: 10px 18px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.btn-primary {
+  background: #ffffff;
+  color: #050508;
+}
+
+.btn-ghost {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #f5f5f5;
+}
+
+/* right visual block */
+.hero-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-avatar {
+  width: 220px;
+  height: 220px;
+  border-radius: 32px;
+  background: radial-gradient(circle at 20% 0%, #ff8a00, #8a2be2);
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.8);
+}
+
+/* responsive */
+@media (max-width: 900px) {
+  .hero {
+    min-height: auto;    /* allow natural height */
+    padding-top: 20px;   /* even tighter */
+  }
+
+  .hero-left,
+  .hero-right {
+    width: 100%;
+  }
+
+  /* .hero-subtitle {
+    margin-left: auto;
+    margin-right: auto;
+  } */
+
+  .hero-actions {
+    justify-content: center;
+  }
+}
+@media (max-width: 400px) {
+  .hero-avatar {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+/* View Projects — Default BLUE */
+.btn-primary {
+  padding: 12px 20px;
+  border-radius: 999px;
+  background: #2d77ff;    /* blue default */
+  color: #fff;            /* white text */
+  border: 1px solid #2d77ff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: 0.25s ease;
+}
+
+/* Hover → WHITE */
+.btn-primary:hover {
+  background: #ffffff;
+  color: #2d77ff;         /* blue text */
+  border-color: #2d77ff;  /* blue border */
+}
+
+
+
+/* Contact Me — Default WHITE */
+.btn-ghost {
+  padding: 12px 20px;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #000;
+  border: none;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: 0.25s ease;
+}
+
+/* Hover → BLUE */
+.btn-ghost:hover {
+  background: #2d77ff;
+  color: #fff;
+}
+
+
+
+/* Responsive alignment */
+@media (max-width: 600px) {
+  .hero-actions {
+    flex-direction: column;
+  }
+}
+.blue {
+  color: #2d77ff; /* same blue as your buttons and .dev */
+}
+.hero-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;   /* stack clock above card */
+  align-items: center;
+  gap: 20px;                /* spacing between clock and card */
+}
+
+/* optional — nudges clock slightly to the right to look premium */
+.clock-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 170px;
+}
+
+.big-hello {
+  font-size: 1.1rem;
+  padding: 10px 20px;
+  background: rgba(45, 119, 255, 0.2);
+  border: 1px solid rgba(45, 119, 255, 0.4);
+  color: #e07a5f;
+  font-weight: 600;
+  border-radius: 20px;
+}
+
+.role-line {
+  margin-top: 8px;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.8);
+}
+.blue {
+  color: #2d77ff;
+}
+
+.hero-subtitle {
+  margin-top: 16px;
+  font-size: 1rem;
+  max-width: 460px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+:host-context(.light-theme) .role-line,
+:host-context(.light-theme) .hero-subtitle {
+  color: #1f2933;
+}
+/* Light theme: Contact Me button turns black */
+:host-context(.light-theme) .btn-ghost {
+  background: #000;
+  color: #fff;
+}
+
+/* LIGHT THEME OVERRIDE FOR CONTACT ME BUTTON ONLY */
+:host-context(.light-theme) .btn-ghost {
+  background: #000; 
+  color: #fff;         
+}
+
+:host-context(.light-theme) .btn-ghost:hover {
+  background: #2d77ff;  /* same blue as always */
+  color: #fff;
+}
+
+/* FORCE View Projects to stay blue in LIGHT mode as well */
+:host-context(.light-theme) .btn-primary {
+  background: #2d77ff;
+  color: #fff;
+  border-color: #2d77ff;
+}
+
+
+
+
+
