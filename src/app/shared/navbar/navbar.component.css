@@ -151,4 +151,27 @@ body.light-theme .resume-btn {
   color: #e07a5f; /* modern blue */
 }
 
+.nav-right a {
+  position: relative;
+  padding: 6px 10px;
+  border-radius: 8px;
+
+  /* Keep border always so hover doesn't change width/height */
+  border: 1px solid transparent;
+
+  transition: 0.25s ease;
+}
+
+/* Glassy hover without shaking */
+.nav-right a:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  border-color: rgba(255, 255, 255, 0.15);  /* border simply becomes visible */
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.12);
+}
+
+
 

@@ -1,13 +1,97 @@
-a {
-  color: #007bff;
-  text-decoration: none;
+/* Wrapper same structure as contrib-wrapper */
+.contact-wrapper {
+  margin-top: 80px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 20px;
+  text-align: center;
 }
 
-a:hover {
+/* Header row */
+.contact-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-title {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.contact-icon {
+  width: 36px;
+  height: 36px;
+}
+
+/* Underline */
+.contact-underline {
+  width: 100%;
+  height: 1.5px;
+  background: rgba(255, 255, 255, 0.12);
+  margin: 12px auto 30px;
+}
+
+.contact-card {
+  background: #0d0d0d; /* same dark style as skill box */
+  border-radius: 18px;
+  padding: 24px 26px;
+
+  /* Blue outline + glow */
+  border: 1px solid #003554;
+  box-shadow: 0 0 8px rgba(37, 99, 235, 0.25);
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Each row */
+.contact-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+  font-size: 1.05rem;
+}
+
+/* Label */
+.contact-label {
+  color: rgba(226, 232, 240, 0.9);
+  font-weight: 500;
+}
+
+/* Link/text */
+.contact-value {
+  color: #1976d2;
+  font-weight: 400;
+  text-decoration: none;
+  word-break: break-word;
+}
+
+.contact-value:hover {
   text-decoration: underline;
 }
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+
+/* Light mode support */
+:host-context(.light-theme) .contact-title,
+:host-context(.light-theme) .contact-label {
+  color: #1a1a1a;
+}
+
+:host-context(.light-theme) .contact-underline {
+  background: rgba(0, 0, 0, 0.15);
+}
+
+:host-context(.light-theme) .contact-card {
+  background: rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+:host-context(.light-theme) .contact-value {
+  color: #2563eb;
 }

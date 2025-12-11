@@ -1,31 +1,76 @@
-.project-grid {
-  display: grid;
-  gap: 20px;
+.project-wrapper {
+  margin-top: 80px;
+  margin-bottom: 260px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 20px 40px;
+  text-align: center;
 }
 
-/* Mobile = 1 column */
-@media (min-width: 600px) {
-  .project-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+
+/* Header */
+.project-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 
-/* Desktop = 3 columns */
-@media (min-width: 992px) {
-  .project-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
+.project-title {
+  font-size: 2rem;
+  font-weight: 600;
 }
 
-.project-card {
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  border: 1px solid #ddd;
-  transition: 0.2s ease;
+.project-icon {
+  width: 36px;
+  height: 36px;
 }
 
-.project-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+/* Underline */
+.project-underline {
+  width: 100%;
+  height: 1.5px;
+  background: rgba(255, 255, 255, 0.12);
+  margin: 12px auto 30px;
+}
+
+/* Single Card — matching Contact Box outline */
+.project-card-one {
+  background: #0d0d0d;
+  border-radius: 18px;
+  padding: 30px;
+  max-width: 600px;
+  margin: 0 auto;
+
+  /* blue outline + glow same as contact */
+  border: 1px solid rgba(37, 99, 235, 0.35);
+  box-shadow: 0 0 8px rgba(37, 99, 235, 0.25);
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.coming-soon {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: rgba(226, 232, 240, 0.9);
+}
+
+/* Light mode */
+:host-context(.light-theme) .project-title {
+  color: #1a1a1a;
+}
+
+:host-context(.light-theme) .project-underline {
+  background: rgba(0, 0, 0, 0.15);
+}
+
+:host-context(.light-theme) .project-card-one {
+  background: rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+:host-context(.light-theme) .coming-soon {
+  color: #1a1a1a;
 }
