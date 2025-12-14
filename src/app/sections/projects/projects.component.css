@@ -74,3 +74,98 @@
 :host-context(.light-theme) .coming-soon {
   color: #1a1a1a;
 }
+
+/* Make card clickable */
+.project-link {
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+}
+
+/* Text inside project card */
+.project-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: rgba(226, 232, 240, 0.95);
+}
+
+.project-desc {
+  font-size: 0.95rem;
+  color: rgba(226, 232, 240, 0.8);
+  margin-bottom: 12px;
+}
+
+.project-cta {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #2d77ff;
+}
+
+/* Hover effect */
+.project-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 14px rgba(45, 119, 255, 0.35);
+}
+
+/* Light mode */
+:host-context(.light-theme) .project-name {
+  color: #1a1a1a;
+}
+
+:host-context(.light-theme) .project-desc {
+  color: #333;
+}
+.project-grid {
+  display: grid;
+  gap: 20px;
+}
+
+/* Responsive grid */
+@media (min-width: 640px) {
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Clickable card */
+.project-link {
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.project-name {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: rgba(226, 232, 240, 0.95);
+}
+
+.project-desc {
+  font-size: 0.95rem;
+  color: rgba(226, 232, 240, 0.8);
+  margin-bottom: 10px;
+}
+
+.project-cta {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #2d77ff;
+}
+
+/* Hover */
+.project-link:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 16px rgba(45, 119, 255, 0.35);
+}
+
+/* Light mode */
+:host-context(.light-theme) .project-name {
+  color: #1a1a1a;
+}
+
+:host-context(.light-theme) .project-desc {
+  color: #333;
+}
+
